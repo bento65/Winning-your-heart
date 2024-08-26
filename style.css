@@ -1,0 +1,115 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+background-image: url(https://scontent.fmab2-1.fna.fbcdn.net/v/t39.30808-6/449316615_1511548700241038_2653063680569493943_n.jpg?stp=c0.89.1080.1080a_dst-jpg_s206x206&_nc_cat=107&ccb=1-7&_nc_sid=714c7a&_nc_ohc=0-B8vWbqJxQQ7kNvgF09Vwx&_nc_ht=scontent.fmab2-1.fna&oh=00_AYA00PV3JzNWJcIoFVZIPhlLOzKKDxqkUk40pmzAI-abrw&oe=66D23132);    
+font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    border: 2px solid #ff69b4;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.495);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+    position: relative;
+}
+
+h1 {
+    color: #ff69b4;
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: bounceIn 1s;
+}
+
+p {
+    color: #000000;
+    font-size: 1.3em;
+    line-height: 1.6;
+    margin: 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover {
+    background-color: #ff1493;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background-color: #c71585;
+    transform: scale(1);
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border: 2px solid #ff69b4;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup h2 {
+    color: #ff69b4;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.popup p {
+    color: #333;
+    font-size: 1.3em;
+    line-height: 1.6;
+}
+
+.popup .btn {
+    margin-top: 20px;
+    background-color: #ff69b4;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
